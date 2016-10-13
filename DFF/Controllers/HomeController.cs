@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using DFF.Models;
 
 namespace DFF.Controllers
 {
@@ -26,5 +27,26 @@ namespace DFF.Controllers
 
             return View();
         }
+
+        [HttpGet]
+        public ActionResult RegisterEvent()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult RegisterEvent(RegisterEventModel form)
+        {
+            if (ModelState.IsValid)
+            {
+                return View();
+
+            }
+            else
+            {
+                return View();
+            }
+        }
+
     }
 }
